@@ -78,5 +78,19 @@ module.exports = {
         'no-unused-expressions': 'off',
       },
     },
+    {
+      files: ['addons/*/test/**/*.test.js', 'elements/test/**/*.test.js'],
+      env: {
+        mocha: true,
+      },
+      rules: {
+        'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+      },
+      globals: {
+        assert: 'readable',
+        expect: 'readable',
+        sinon: 'readable',
+      },
+    },
   ],
 };
