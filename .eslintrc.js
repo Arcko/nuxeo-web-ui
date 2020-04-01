@@ -79,12 +79,12 @@ module.exports = {
       },
     },
     {
-      files: ['addons/*/test/**/*.test.js', 'elements/test/**/*.test.js'],
+      files: ['addons/**/test/**/*.test.js', 'elements/test/**/*.test.js'],
       env: {
         mocha: true,
       },
       rules: {
-        'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+        'no-unused-expressions': 'off',
       },
       globals: {
         assert: 'readable',
